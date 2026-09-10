@@ -1,5 +1,3 @@
-# Smart-Expense-Manager
-
 # Smart Expense Manager 💰
 
 A simple and responsive web application for tracking income, expenses, and monthly budgets.
