@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Expense Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Smart Expense Manager</div>
+    <div class="date" id="today"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">PERSONAL FINANCE</p>
+        <h1>Manage your money smarter.</h1>
+        <p class="subtitle">Track income, expenses and your monthly budget in one simple dashboard.</p>
+      </div>
+      <div class="budget-box">
+        <span>Monthly Budget</span>
+        <strong id="budgetDisplay">₹15,000</strong>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card"><span>Total Income</span><strong id="income">₹0</strong></div>
+      <div class="card"><span>Total Expenses</span><strong id="expense">₹0</strong></div>
+      <div class="card"><span>Balance</span><strong id="balance">₹0</strong></div>
+      <div class="card"><span>Budget Left</span><strong id="budgetLeft">₹15,000</strong></div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+          <label>Type</label>
+          <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+
+          <label>Description</label>
+          <input id="description" type="text" placeholder="e.g. Salary / Food" required>
+
+          <label>Category</label>
+          <select id="category">
+            <option>Salary</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Education</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Other</option>
+          </select>
+
+          <label>Amount (₹)</label>
+          <input id="amount" type="number" min="1" placeholder="Enter amount" required>
+
+          <button type="submit">Add Transaction</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Recent Transactions</h2>
+          <button class="clear" id="clearAll">Clear All</button>
+        </div>
+        <div id="transactions" class="transactions">
+          <p class="empty">No transactions yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel insight">
+      <h2>Smart Insight</h2>
+      <p id="insightText">Add a few transactions to receive spending insights.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
